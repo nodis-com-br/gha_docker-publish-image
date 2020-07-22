@@ -4,7 +4,7 @@ export PIP_INDEX_URL="https://${NODIS_PYPI_USER}:${NODIS_PYPI_PASSWORD}@${NODIS_
 export PIP_EXTRA_INDEX_URL="https://pypi.org/simple/"
 
 [[ -z ${DOCKER_HUB_USER} ]] || echo ${DOCKER_HUB_PASSWORD} | docker login docker.io -u ${DOCKER_HUB_USER} --password-stdin
-[[ -z ${NODIS_GERISTRY_USER} ]] || echo ${NODIS_REGISTRY_PASSWORD} | docker login ${NODIS_REGISTRY_HOST} -u ${NODIS_REGISTRY_USER} --password-stdin
+[[ -z ${NODIS_REGISTRY_USER} ]] || echo ${NODIS_REGISTRY_PASSWORD} | docker login ${NODIS_REGISTRY_HOST} -u ${NODIS_REGISTRY_USER} --password-stdin
 
 if [[ ${GITHUB_REF} == "ref/head/master" && ${NODIS_SERVICE_TYPE} == "deployment" ]]; then
 
