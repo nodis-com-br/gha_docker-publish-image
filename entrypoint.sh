@@ -1,4 +1,5 @@
 #!/usr/bin/env sh
+set -e
 
 export PIP_INDEX_URL="https://${NODIS_PYPI_USER}:${NODIS_PYPI_PASSWORD}@${NODIS_PYPI_HOST}/simple"
 
