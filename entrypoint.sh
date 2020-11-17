@@ -1,7 +1,9 @@
 #!/usr/bin/env sh
 set -e
 
-source ${GITHUB_ENV}
+cat ${GITHUB_ENV}
+
+echo "##################################################################"
 
 env | sort
 
