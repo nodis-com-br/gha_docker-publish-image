@@ -2,8 +2,8 @@
 set -e
 
 cat ${GITHUB_ENV}
-
-ls -ls /github
+echo ${GITHUB_ENV}
+ls -ls /github/file_commands
 
 echo "##################################################################"
 
