@@ -1,6 +1,8 @@
 #!/usr/bin/env sh
 set -e
 
+source ${GITHUB_ENV}
+
 env | sort
 
 DOCKER_BUILD_ARGUMENTS="--build-arg PIP_INDEX_URL=https://${NODIS_PYPI_USER}:${NODIS_PYPI_PASSWORD}@${NODIS_PYPI_HOST}/simple"
