@@ -1,9 +1,9 @@
 #!/usr/bin/env sh
 set -e
 
-export PIP_INDEX_URL="https://${NODIS_PYPI_USER}:${NODIS_PYPI_PASSWORD}@${NODIS_PYPI_HOST}/simple"
+env | sort
 
-DOCKER_BUILD_ARGUMENTS="--build-arg PIP_INDEX_URL"
+DOCKER_BUILD_ARGUMENTS="--build-arg PIP_INDEX_URL=https://${NODIS_PYPI_USER}:${NODIS_PYPI_PASSWORD}@${NODIS_PYPI_HOST}/simple"
 
 [[ -z ${DOCKER_HUB_USER} ]] || echo ${DOCKER_HUB_PASSWORD} | docker login docker.io -u ${DOCKER_HUB_USER} --password-stdin
 [[ -z ${NODIS_REGISTRY_USER} ]] || echo ${NODIS_REGISTRY_PASSWORD} | docker login ${NODIS_REGISTRY_HOST} -u ${NODIS_REGISTRY_USER} --password-stdin
