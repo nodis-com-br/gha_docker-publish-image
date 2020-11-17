@@ -1,9 +1,9 @@
 #!/usr/bin/env sh
 set -e
 
-cat ${GITHUB_ENV}
-echo ${GITHUB_ENV}
-ls -ls /github/file_commands
+#cat ${GITHUB_ENV}
+#echo ${GITHUB_ENV}
+source /github/file_commands/set_env*
 
 echo "##################################################################"
 
